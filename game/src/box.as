@@ -24,13 +24,13 @@
 			_value = value;
 		}
 		
-		public function win(i:int, j:int) { //check winning  
+		public function win(i:int, j:int) : Boolean { //check winning  
 			if(GetValue() == i * 4 + j + 1){
-				gotoAndPlay(GetValue()+16);
-				stop();
+				gotoAndStop(GetValue()+16);
+				return true;
 			}else{
-				gotoAndPlay(GetValue());
-				stop();
+				gotoAndStop(GetValue());
+				return false;
 			}
 		}
 	}
