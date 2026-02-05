@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shishnashki (JS)</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Shishnashki</h1>
+      <p>JavaScript rewrite of the original AS3 puzzle.</p>
+    </header>
+
+    <section class="controls">
+      <button id="start">Play</button>
+      <button id="restart">Restart</button>
+      <button id="help">How to play</button>
+      <span id="time">00:00</span>
+    </section>
+
+    <section class="board-wrap">
+      <div id="board" class="board" aria-label="4x4 puzzle board"></div>
+      <div id="buttons" class="swap-buttons" aria-label="3x3 swap controls"></div>
+    </section>
+
+    <dialog id="helpDialog">
+      <h2>How to play</h2>
+      <p>Click one of the 3x3 buttons. It rotates the corresponding 2x2 block clockwise.</p>
+      <p>Arrange numbers in order from 1 to 16.</p>
+      <button id="closeHelp">Close</button>
+    </dialog>
+
+    <dialog id="winDialog">
+      <h2>You win 🎉</h2>
+      <p>Your time: <strong id="finalTime">00:00</strong></p>
+      <button id="playAgain">Play again</button>
+    </dialog>
+  </main>
+
+  <script src="./js/app.js" defer></script>
+</body>
+</html>
